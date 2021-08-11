@@ -3,13 +3,18 @@ package Testing;
 import rdevs.implementation.tracker.models.EssentialModelInstanceTracker;
 import rdevs.implementation.tracker.models.NetworkModelTracker;
 import rdevs.implementation.tracker.models.RoutingModelTracker;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 public class main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		/*Prueba*/		
 //		NetworkModelTracker modeloRed = new NetworkModelTracker("Modelo RED 1");
 //		
@@ -34,6 +39,10 @@ public class main {
 //		
 //		modeloRed.showData();
 		
+			/*Funcion que crea el JSON*/
+		 try (PrintStream out = new PrintStream(new FileOutputStream("./Output.json"))) {
+	            out.print("Mensaje que se escribe");
+	        }
 	}
 
 }
