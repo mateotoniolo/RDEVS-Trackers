@@ -1,6 +1,9 @@
 package rdevs.implementation.tracker.models;
 
 import java.util.Optional;
+
+import com.google.gson.annotations.Expose;
+
 import rdevs.implementation.tracker.entities.Event;
 import rdevs.implementation.tracker.entities.InputPort;
 import rdevs.implementation.tracker.entities.OutputPort;
@@ -8,13 +11,13 @@ import rdevs.implementation.tracker.enums.TypeEvent;
 
 public class RoutingModelTracker {
 	
-	int id;
-	String name;
-	EssentialModelInstanceTracker EModel;
-	InputPort entrance;
-	OutputPort exit;
-	NetworkModelTracker NModel;
-	double clock;
+	@Expose int id;
+	@Expose String name;
+	@Expose EssentialModelInstanceTracker EModel;
+	@Expose InputPort entrance;
+	@Expose OutputPort exit;
+	 NetworkModelTracker NModel;
+	@Expose double clock;
 	
 	public RoutingModelTracker(String name, int id, EssentialModelInstanceTracker em) {
 		this.name = name;
@@ -42,8 +45,8 @@ public class RoutingModelTracker {
 	}
 
 	/*
-	 * Este método debería mostrar renglón a renglón los eventos que han salido desde este
-	 * routing tracker, con toda su información.
+	 * Este mï¿½todo deberï¿½a mostrar renglï¿½n a renglï¿½n los eventos que han salido desde este
+	 * routing tracker, con toda su informaciï¿½n.
 	 */
 	private void showOutputEvents() {
 		System.out.println("Output Events:");
@@ -78,7 +81,7 @@ public class RoutingModelTracker {
 	}
 	
 	/*
-	 * Este método debería tomar los datos como argumento y generar el evento que se manda desde
+	 * Este mï¿½todo deberï¿½a tomar los datos como argumento y generar el evento que se manda desde
 	 * este modelo hacia todos los demas (con todo lo que implica).
 	 */
 	public void sendingOutputEvent(int sourceID, String highLevelEventType, int[] destinationsID) {
@@ -96,8 +99,8 @@ public class RoutingModelTracker {
 	}
 	
 	/*
-	 * Este método debería tomar los datos como argumento y generar el evento que se acepta en 
-	 * este modelo proveniente de un source específico (con todo lo que implica).
+	 * Este mï¿½todo deberï¿½a tomar los datos como argumento y generar el evento que se acepta en 
+	 * este modelo proveniente de un source especï¿½fico (con todo lo que implica).
 	 */
 	public void acceptingInputEvent(int senderID, String highLevelType) {
 		if(senderID == 0) {

@@ -3,6 +3,8 @@ package rdevs.implementation.tracker.models;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.google.gson.annotations.Expose;
+
 import rdevs.implementation.tracker.entities.Coupling;
 import rdevs.implementation.tracker.entities.Event;
 import rdevs.implementation.tracker.entities.ExternalCoupling;
@@ -15,14 +17,14 @@ import rdevs.implementation.tracker.enums.TypeEvent;
 
 public class NetworkModelTracker {
 
-	String name;
-	List<RoutingModelTracker> entities;
-	List<Coupling> InternalCoupling;
+	@Expose String name;
+	@Expose List<RoutingModelTracker> entities;
+	@Expose List<Coupling> InternalCoupling;
 //	List<ExternalInputCoupling> EIC;
 //	List<ExternalOutputCoupling> EOC;
-	ExternalOutputPort EOP;
-	ExternalInputPort EIP;
-	List<ExternalCoupling> Externals; //Lista de Todos los ExternalCouplings, tanto input como output
+	@Expose ExternalOutputPort EOP;
+	@Expose ExternalInputPort EIP;
+	@Expose List<ExternalCoupling> Externals; 		//Lista de Todos los ExternalCouplings, tanto input como output
 	
 	public NetworkModelTracker(String name) {
 		this.name = name;
@@ -42,8 +44,8 @@ public class NetworkModelTracker {
 		}
 		entities.add(rm);
 		rm.addNetworkModelReference(this);
-		Externals.add(new ExternalOutputCoupling(rm.getExit(),EOP));//Agrega un ExternalOutputCoupling que va del RM al EOP del NM
-		Externals.add(new ExternalInputCoupling(rm.getEntrance(),EIP));//Agrega un ExternalInputCoupling que va del EIP al RM 
+		Externals.add(new ExternalOutputCoupling(rm.getExit(),EOP));		//Agrega un ExternalOutputCoupling que va del RM al EOP del NM
+		Externals.add(new ExternalInputCoupling(rm.getEntrance(),EIP));		//Agrega un ExternalInputCoupling que va del EIP al RM 
 	}
 	
 	public void showData() {
@@ -95,4 +97,5 @@ public class NetworkModelTracker {
 		}
 		
 	}
+	
 }

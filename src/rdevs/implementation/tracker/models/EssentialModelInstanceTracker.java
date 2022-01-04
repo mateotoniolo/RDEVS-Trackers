@@ -1,8 +1,10 @@
 package rdevs.implementation.tracker.models;
 
+import com.google.gson.annotations.Expose;
+
 public class EssentialModelInstanceTracker {
 
-	String name;
+	@Expose String name;
 	RoutingModelTracker RModel;
 	
 	public EssentialModelInstanceTracker(String name) {
