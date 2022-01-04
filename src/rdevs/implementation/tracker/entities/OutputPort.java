@@ -3,12 +3,14 @@ package rdevs.implementation.tracker.entities;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.annotations.Expose;
+
 import rdevs.implementation.tracker.models.RoutingModelTracker;
 
 public class OutputPort {
-	String name;
+	@Expose String name;
 	RoutingModelTracker rm;
-	List<Event> events;
+	@Expose List<Event> events;
 	List<Coupling> couplings;//Lista de todos los coupling que salen de este puerto
 	ExternalOutputCoupling EOC;//Registra el coupling que lo une al ExternalOutputPort 
 	
