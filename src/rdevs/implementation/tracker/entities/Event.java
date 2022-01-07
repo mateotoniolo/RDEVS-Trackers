@@ -13,7 +13,7 @@ public class Event {
 	@Expose ConcreteEvent concrete;
 	@Expose ExternalInputPort eip;
 	@Expose ExternalOutputPort eop;
-	// Crear atributo sourceID y targetID q permita identificar el modelo de ruteo q los contiene para poner en el JSON
+	// Crear atributo sourceID y targetID q permita identificar el modelo de ruteo q los contiene para poner en el JSON lo mismo para los EIP
 		
 	public Event(double clock,TypeEvent t, OutputPort s, InputPort tg,String highLevelType) {
 		type = t;

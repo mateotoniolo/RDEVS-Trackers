@@ -3,6 +3,7 @@ package rdevs.implementation.tracker.entities;
 public class Coupling {
 	OutputPort origin;
 	InputPort  end;
+	//Hacer un originID y un endID para no poner informacion redundante
 	
 	public Coupling(OutputPort op, InputPort ip) {
 		this.origin = op;

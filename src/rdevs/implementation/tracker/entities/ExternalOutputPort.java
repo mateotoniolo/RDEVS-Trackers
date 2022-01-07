@@ -3,12 +3,14 @@ package rdevs.implementation.tracker.entities;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.annotations.Expose;
+
 import rdevs.implementation.tracker.models.NetworkModelTracker;
 
 public class ExternalOutputPort {
 	NetworkModelTracker NModel;//Los External couplings que salen de este port
-	String name;			   // se guardan en el modelo de red. Se puede cambiar de ser necesario.
-	List<Event> events;
+	@Expose String name;			   // se guardan en el modelo de red. Se puede cambiar de ser necesario.
+	/*@Expose*/ List<Event> events;
 	public String getName() {
 		return name;
 	}
