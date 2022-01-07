@@ -16,7 +16,7 @@ public class RoutingModelTracker {
 	@Expose EssentialModelInstanceTracker EModel;
 	@Expose InputPort entrance;
 	@Expose OutputPort exit;
-	 NetworkModelTracker NModel;
+	NetworkModelTracker NModel;
 	@Expose double clock;
 	
 	public RoutingModelTracker(String name, int id, EssentialModelInstanceTracker em) {

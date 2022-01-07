@@ -1,16 +1,19 @@
 package rdevs.implementation.tracker.entities;
 
+import com.google.gson.annotations.Expose;
+
 import rdevs.implementation.tracker.enums.TypeEvent;
 
 public class Event {
-	TypeEvent type;
+	@Expose TypeEvent type;
 	OutputPort source;
 	InputPort target;
-	double timing;
-	String highLevelType;
-	ConcreteEvent concrete;
-	ExternalInputPort eip;
-	ExternalOutputPort eop;
+	@Expose double timing;
+	@Expose String highLevelType;
+	@Expose ConcreteEvent concrete;
+	@Expose ExternalInputPort eip;
+	@Expose ExternalOutputPort eop;
+	// Crear atributo sourceID y targetID q permita identificar el modelo de ruteo q los contiene para poner en el JSON
 		
 	public Event(double clock,TypeEvent t, OutputPort s, InputPort tg,String highLevelType) {
 		type = t;
@@ -76,7 +79,7 @@ public class Event {
 		}
 		else {
 			//TODO MJB to Mateo: Aca hay que diferenciar los eventos externos entrantes de los externos salientes.
-			// MJB to Mateo: Agregar el HighLevelType en el print para ver toda la información asociada al evento.
+			// MJB to Mateo: Agregar el HighLevelType en el print para ver toda la informaciï¿½n asociada al evento.
 			
 			System.out.println("*EXTERNAL EVENT -> Time: " + this.timing + " | From: " + this.source.getRm().getNameAndID() + " --------> To: " + this.eop.getName()+" | High Level Type: "+ this.highLevelType );
 		}
