@@ -1,1 +1,185 @@
-Mensaje que se escribe
+{
+  "name": "Modelo RED 1",
+  "entities": [
+    {
+      "id": 1,
+      "name": "Modelo RUTEO 1",
+      "EModel": {
+        "name": "Modelo ESENCIAL 1"
+      },
+      "entrance": {
+        "name": "InputPort of (Modelo RUTEO 1,1)",
+        "events": [],
+        "couplings": [
+          {},
+          {},
+          {}
+        ],
+        "EIC": {}
+      },
+      "exit": {
+        "name": "OutputPort of (Modelo RUTEO 1,1)",
+        "events": [
+          {
+            "type": "Internal",
+            "timing": 0.0,
+            "highLevelType": "type1"
+          },
+          {
+            "type": "External",
+            "timing": 0.0,
+            "highLevelType": "type1"
+          }
+        ],
+        "couplings": [
+          {},
+          {},
+          {}
+        ],
+        "EOC": {}
+      },
+      "clock": 0.0
+    },
+    {
+      "id": 2,
+      "name": "Modelo RUTEO 2",
+      "EModel": {
+        "name": "Modelo ESENCIAL 2"
+      },
+      "entrance": {
+        "name": "InputPort of (Modelo RUTEO 2,2)",
+        "events": [
+          {
+            "type": "Internal",
+            "timing": 0.0,
+            "highLevelType": "type1"
+          },
+          {
+            "type": "External",
+            "timing": 0.0,
+            "highLevelType": "type2",
+            "concrete": {}
+          }
+        ],
+        "couplings": [
+          {},
+          {},
+          {}
+        ],
+        "EIC": {}
+      },
+      "exit": {
+        "name": "OutputPort of (Modelo RUTEO 2,2)",
+        "events": [],
+        "couplings": [
+          {},
+          {},
+          {}
+        ],
+        "EOC": {}
+      },
+      "clock": 0.0
+    },
+    {
+      "id": 3,
+      "name": "Modelo RUTEO 3",
+      "EModel": {
+        "name": "Modelo ESENCIAL 3"
+      },
+      "entrance": {
+        "name": "InputPort of (Modelo RUTEO 3,3)",
+        "events": [],
+        "couplings": [
+          {},
+          {},
+          {}
+        ],
+        "EIC": {}
+      },
+      "exit": {
+        "name": "OutputPort of (Modelo RUTEO 3,3)",
+        "events": [],
+        "couplings": [
+          {},
+          {},
+          {}
+        ],
+        "EOC": {}
+      },
+      "clock": 0.0
+    },
+    {
+      "id": 4,
+      "name": "Modelo RUTEO 4",
+      "EModel": {
+        "name": "Modelo ESENCIAL 4"
+      },
+      "entrance": {
+        "name": "InputPort of (Modelo RUTEO 4,4)",
+        "events": [],
+        "couplings": [
+          {},
+          {},
+          {}
+        ],
+        "EIC": {}
+      },
+      "exit": {
+        "name": "OutputPort of (Modelo RUTEO 4,4)",
+        "events": [],
+        "couplings": [
+          {},
+          {},
+          {}
+        ],
+        "EOC": {}
+      },
+      "clock": 0.0
+    }
+  ],
+  "InternalCoupling": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "EIP": {
+    "name": "External Input Port of Modelo RED 1",
+    "events": [
+      {
+        "type": "External",
+        "timing": 0.0,
+        "highLevelType": "type2",
+        "concrete": {}
+      }
+    ]
+  },
+  "EOP": {
+    "name": "External Output Port of Modelo RED 1",
+    "events": [
+      {
+        "type": "External",
+        "timing": 0.0,
+        "highLevelType": "type1"
+      }
+    ]
+  },
+  "Externals": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ]
+}

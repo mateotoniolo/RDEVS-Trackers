@@ -3,7 +3,7 @@ package rdevs.implementation.tracker.entities;
 import com.google.gson.annotations.Expose;
 
 public class ConcreteEvent {
-	@Expose Event event;
+	 Event event;
 	
 	
 	public ConcreteEvent(Event e) {

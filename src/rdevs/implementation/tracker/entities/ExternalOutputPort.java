@@ -10,7 +10,7 @@ import rdevs.implementation.tracker.models.NetworkModelTracker;
 public class ExternalOutputPort {
 	NetworkModelTracker NModel;//Los External couplings que salen de este port
 	@Expose String name;			   // se guardan en el modelo de red. Se puede cambiar de ser necesario.
-	/*@Expose*/ List<Event> events;
+	@Expose List<Event> events;
 	public String getName() {
 		return name;
 	}

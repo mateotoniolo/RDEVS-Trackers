@@ -43,9 +43,9 @@ public class main {
 		System.out.println(gson.toJson(modeloRed));
 		
 			/*Funcion que crea el JSON*/
-//		 try (PrintStream out = new PrintStream(new FileOutputStream("./Output.json"))) {
-//	            out.print("Mensaje que se escribe");
-//	        }
+		 try (PrintStream out = new PrintStream(new FileOutputStream("./Output.json"))) {
+	            out.print(gson.toJson(modeloRed));
+	        }
 	}
 
 }
