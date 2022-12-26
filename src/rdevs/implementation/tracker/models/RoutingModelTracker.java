@@ -13,6 +13,14 @@ public class RoutingModelTracker {
 	
 	@Expose int id;
 	@Expose String name;
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	@Expose EssentialModelInstanceTracker EModel;
 	@Expose InputPort entrance;
 	@Expose OutputPort exit;

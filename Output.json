@@ -9,13 +9,7 @@
       },
       "entrance": {
         "name": "InputPort of (Modelo RUTEO 1,1)",
-        "events": [],
-        "couplings": [
-          {},
-          {},
-          {}
-        ],
-        "EIC": {}
+        "events": []
       },
       "exit": {
         "name": "OutputPort of (Modelo RUTEO 1,1)",
@@ -30,13 +24,7 @@
             "timing": 0.0,
             "highLevelType": "type1"
           }
-        ],
-        "couplings": [
-          {},
-          {},
-          {}
-        ],
-        "EOC": {}
+        ]
       },
       "clock": 0.0
     },
@@ -60,23 +48,11 @@
             "highLevelType": "type2",
             "concrete": {}
           }
-        ],
-        "couplings": [
-          {},
-          {},
-          {}
-        ],
-        "EIC": {}
+        ]
       },
       "exit": {
         "name": "OutputPort of (Modelo RUTEO 2,2)",
-        "events": [],
-        "couplings": [
-          {},
-          {},
-          {}
-        ],
-        "EOC": {}
+        "events": []
       },
       "clock": 0.0
     },
@@ -88,23 +64,11 @@
       },
       "entrance": {
         "name": "InputPort of (Modelo RUTEO 3,3)",
-        "events": [],
-        "couplings": [
-          {},
-          {},
-          {}
-        ],
-        "EIC": {}
+        "events": []
       },
       "exit": {
         "name": "OutputPort of (Modelo RUTEO 3,3)",
-        "events": [],
-        "couplings": [
-          {},
-          {},
-          {}
-        ],
-        "EOC": {}
+        "events": []
       },
       "clock": 0.0
     },
@@ -116,40 +80,88 @@
       },
       "entrance": {
         "name": "InputPort of (Modelo RUTEO 4,4)",
-        "events": [],
-        "couplings": [
-          {},
-          {},
-          {}
-        ],
-        "EIC": {}
+        "events": []
       },
       "exit": {
         "name": "OutputPort of (Modelo RUTEO 4,4)",
-        "events": [],
-        "couplings": [
-          {},
-          {},
-          {}
-        ],
-        "EOC": {}
+        "events": []
       },
       "clock": 0.0
     }
   ],
   "InternalCoupling": [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {}
+    {
+      "originFullname": "Origin is OutputPort of (Modelo RUTEO 1,1)",
+      "endFullname": "End is InputPort of (Modelo RUTEO 2,2)",
+      "originID": 1,
+      "endID": 2
+    },
+    {
+      "originFullname": "Origin is OutputPort of (Modelo RUTEO 2,2)",
+      "endFullname": "End is InputPort of (Modelo RUTEO 1,1)",
+      "originID": 2,
+      "endID": 1
+    },
+    {
+      "originFullname": "Origin is OutputPort of (Modelo RUTEO 1,1)",
+      "endFullname": "End is InputPort of (Modelo RUTEO 3,3)",
+      "originID": 1,
+      "endID": 3
+    },
+    {
+      "originFullname": "Origin is OutputPort of (Modelo RUTEO 3,3)",
+      "endFullname": "End is InputPort of (Modelo RUTEO 1,1)",
+      "originID": 3,
+      "endID": 1
+    },
+    {
+      "originFullname": "Origin is OutputPort of (Modelo RUTEO 2,2)",
+      "endFullname": "End is InputPort of (Modelo RUTEO 3,3)",
+      "originID": 2,
+      "endID": 3
+    },
+    {
+      "originFullname": "Origin is OutputPort of (Modelo RUTEO 3,3)",
+      "endFullname": "End is InputPort of (Modelo RUTEO 2,2)",
+      "originID": 3,
+      "endID": 2
+    },
+    {
+      "originFullname": "Origin is OutputPort of (Modelo RUTEO 1,1)",
+      "endFullname": "End is InputPort of (Modelo RUTEO 4,4)",
+      "originID": 1,
+      "endID": 4
+    },
+    {
+      "originFullname": "Origin is OutputPort of (Modelo RUTEO 4,4)",
+      "endFullname": "End is InputPort of (Modelo RUTEO 1,1)",
+      "originID": 4,
+      "endID": 1
+    },
+    {
+      "originFullname": "Origin is OutputPort of (Modelo RUTEO 2,2)",
+      "endFullname": "End is InputPort of (Modelo RUTEO 4,4)",
+      "originID": 2,
+      "endID": 4
+    },
+    {
+      "originFullname": "Origin is OutputPort of (Modelo RUTEO 4,4)",
+      "endFullname": "End is InputPort of (Modelo RUTEO 2,2)",
+      "originID": 4,
+      "endID": 2
+    },
+    {
+      "originFullname": "Origin is OutputPort of (Modelo RUTEO 3,3)",
+      "endFullname": "End is InputPort of (Modelo RUTEO 4,4)",
+      "originID": 3,
+      "endID": 4
+    },
+    {
+      "originFullname": "Origin is OutputPort of (Modelo RUTEO 4,4)",
+      "endFullname": "End is InputPort of (Modelo RUTEO 3,3)",
+      "originID": 4,
+      "endID": 3
+    }
   ],
   "EIP": {
     "name": "External Input Port of Modelo RED 1",
@@ -171,15 +183,5 @@
         "highLevelType": "type1"
       }
     ]
-  },
-  "Externals": [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {}
-  ]
+  }
 }

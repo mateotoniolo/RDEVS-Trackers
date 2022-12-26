@@ -11,8 +11,8 @@ public class OutputPort {
 	@Expose String name;
 	RoutingModelTracker rm;
 	@Expose	 List<Event> events;
-	@Expose  List<Coupling> couplings;//Lista de todos los coupling que salen de este puerto
-	@Expose ExternalOutputCoupling EOC;//Registra el coupling que lo une al ExternalOutputPort 
+	/*@Expose*/  List<Coupling> couplings;//Lista de todos los coupling que salen de este puerto
+	/*@Expose*/ ExternalOutputCoupling EOC;//Registra el coupling que lo une al ExternalOutputPort 
 	
 	public List<Event> getEvents() {
 		return events;

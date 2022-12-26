@@ -37,7 +37,7 @@ public class main {
 		modeloRuteo2.acceptingInputEvent(0, "type2");
 		
 		
-		//	modeloRed.showData();
+		modeloRed.showData();
 
 		Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().setPrettyPrinting().create();
 		System.out.println(gson.toJson(modeloRed));

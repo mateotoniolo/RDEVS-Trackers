@@ -24,7 +24,7 @@ public class NetworkModelTracker {
 //	List<ExternalOutputCoupling> EOC;
 	@Expose ExternalInputPort EIP;
 	@Expose ExternalOutputPort EOP;
-	@Expose List<ExternalCoupling> Externals; 		//Lista de Todos los ExternalCouplings, tanto input como output
+	/*@Expose*/ List<ExternalCoupling> Externals; 		//Lista de Todos los ExternalCouplings, tanto input como output
 	
 	public NetworkModelTracker(String name) {
 		this.name = name;

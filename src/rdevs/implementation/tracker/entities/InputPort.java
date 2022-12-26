@@ -11,8 +11,8 @@ public class InputPort {
 	@Expose String name;
 	RoutingModelTracker rm;
 	@Expose List<Event> events = new ArrayList<>();
-	@Expose List<Coupling> couplings = new ArrayList<>();//Lista de todos los coupling que entran a este puerto
-	@Expose ExternalInputCoupling EIC;//Registra el coupling que lo une al ExternalInputPort 
+	/*@Expose*/ List<Coupling> couplings = new ArrayList<>();//Lista de todos los coupling que entran a este puerto
+	/*@Expose*/ ExternalInputCoupling EIC;//Registra el coupling que lo une al ExternalInputPort 
 	
 	public void setEIC(ExternalInputCoupling eIC) {
 		EIC = eIC;

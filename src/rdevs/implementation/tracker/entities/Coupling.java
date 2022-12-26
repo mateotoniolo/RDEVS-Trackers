@@ -1,8 +1,14 @@
 package rdevs.implementation.tracker.entities;
 
+import com.google.gson.annotations.Expose;
+
 public class Coupling {
 	OutputPort origin;
 	InputPort  end;
+	@Expose String originFullname;
+	@Expose String endFullname;
+	@Expose Integer originID;
+	@Expose Integer endID;
 	//Hacer un originID y un endID para no poner informacion redundante
 	
 	public Coupling(OutputPort op, InputPort ip) {
@@ -10,6 +16,10 @@ public class Coupling {
 		this.end = ip;
 		origin.addCoupling(this);//Ambos puertos tienen una lista para llevar
 		end.addCoupling(this);	// registro de los Couplings pertenecientes 
+		this.originFullname =  "Origin is "+this.origin.name;
+		this.endFullname =  "End is "+this.end.name;
+		this.originID = this.origin.getRm().getId();
+		this.endID = this.end.getRm().getId();
 	}
 
 	public OutputPort getOrigin() {
